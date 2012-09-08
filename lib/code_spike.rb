@@ -8,14 +8,12 @@ require 'active_record'
 # require 'code_spike'
 #
 # schema do
-#  create_table :people do |t|
-#    t.string :name
-#  end
-#
-# class Person < ActiveRecord::Base
+#   create_table(:people ){ |t| t.string :name }
 # end
 #
-# class CodeSpike
+# class Person < ActiveRecord::Base; end
+#
+# units do
 #   test "something interesting" do
 #     assert Person.create!
 #   end
@@ -31,4 +29,8 @@ end
 
 class CodeSpike < ActiveSupport::TestCase
   teardown { ActiveRecord::Base.subclasses.each { |klass| klass.destroy_all} }
+end
+
+def units(&block)
+  CodeSpike.instance_eval(&block)
 end
