@@ -4,8 +4,8 @@ require File.expand_path('../lib/code_spike/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Sean Behan"]
   gem.email         = ["inbox@seanbehan.com"]
-  gem.description   = %q{Down and dirty code spiking.}
-  gem.summary       = %q{Spike code for ActiveRecord without a lot of setup code.}
+  gem.description   = %q{Down and dirty ActiveRecord code spiking outside of Rails}
+  gem.summary       = %q{CodeSpike is a simple Gem for spiking ActiveRecord models. It uses an in memory sqlite3 database and requires all the necessary libs for unit testing. In addition it provides a DSL for creating the database schema as well calling test methods.}
   gem.homepage      = "http://github.com/gristmill"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
