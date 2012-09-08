@@ -25,6 +25,15 @@ def schema(&block)
   ActiveRecord::Schema.define do
     instance_eval(&block)
   end
+
+end
+
+def fixtures_directory(fixtures_directory='.')
+  require 'active_record/fixtures'
+  require 'yaml'
+  require 'erb'
+
+  @fixtures_directory = fixtures_directory
 end
 
 class CodeSpike < ActiveSupport::TestCase
@@ -32,5 +41,10 @@ class CodeSpike < ActiveSupport::TestCase
 end
 
 def units(&block)
+
+  if defined?(@fixtures_directory)
+    ActiveRecord::Fixtures.create_fixtures('fixtures', Dir["#{@fixtures_directory}/*.yml"].map { |f| File.basename(f, '.*') })
+  end
+
   CodeSpike.instance_eval(&block)
 end
