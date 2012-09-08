@@ -7,7 +7,7 @@ I created this Gem because when working on complex ActiveRecord associations, I 
 ActiveRecord outside of Rails is easy enough, but the setup is a little verbose and I can never quite remember all the libraries 
 or the exact syntax. So I spend time googling or looking back through old code, which I don't like doing if I've already solved the problem. 
 
-This Gem just wraps the setup and adds a simple DSL so that I can remember!
+This Gem just wraps the setup and adds a simple DSL that I can remember, so I can move right into the problem I'm working on!
 
 Example
 
