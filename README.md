@@ -1,5 +1,11 @@
 # CodeSpike
 
+## Installation
+
+```bash
+gem install code_spike
+```
+
 CodeSpike is a simple Gem for spiking ActiveRecord models. It uses an in memory sqlite3 database and requires all the necessary libs 
 for unit testing. In addition it provides a DSL for creating the database schema as well calling test methods. 
 
@@ -9,7 +15,7 @@ or the exact syntax. So I spend time googling or looking back through old code, 
 
 This Gem just wraps the setup and adds a simple DSL that I can remember, so I can move right into the problem I'm working on!
 
-Example
+## Usage
 
 ```ruby
 require 'code_spike'
