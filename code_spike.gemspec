@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["inbox@seanbehan.com"]
   gem.description   = %q{Down and dirty ActiveRecord code spiking outside of Rails}
   gem.summary       = %q{CodeSpike is a simple Gem for spiking ActiveRecord models. It uses an in memory sqlite3 database and requires all the necessary libs for unit testing. In addition it provides a DSL for creating the database schema as well calling test methods.}
-  gem.homepage      = "http://github.com/gristmill"
+  gem.homepage      = "http://github.com/gristmill/code_spike"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")

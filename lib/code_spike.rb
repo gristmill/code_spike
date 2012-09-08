@@ -28,6 +28,11 @@ def schema(&block)
 
 end
 
+# Fixtures for sample data for tests. Set the directory where the fixture files live.
+#
+# TODO: Add support for fixtures access helpers. If you have a companies.yml file with label `comapany1`, then
+# companies(:company1) should return the ActiveRecord object.
+#
 def fixtures_directory(fixtures_directory='.')
   require 'active_record/fixtures'
   require 'yaml'
