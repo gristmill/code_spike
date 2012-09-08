@@ -66,7 +66,7 @@ You can also use fixtures to load up seed data for your tests. You have to provi
 ```ruby
 require 'code_spike
 
-# Just provide the directory path. In this case, it's the current directory "."
+# Provide the directory path. In this case, it is the current directory ".".
 fixtures_directory '.'
 
 schema do
