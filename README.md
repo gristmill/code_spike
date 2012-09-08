@@ -66,7 +66,10 @@ You can also use fixtures to load up seed data for your tests. You have to provi
 ```ruby
 require 'code_spike'
 
-# Provide the directory path. In this case, it's the current directory ".".
+# In ./companies.yml
+#
+# one:
+#   name: Gristmill
 fixtures_directory '.'
 
 schema do
@@ -77,7 +80,7 @@ class Company < ActiveRecord::Base; end
 
 units do
   test "company" do
-    assert_equal 1, Company.count
+    assert_equal "Gristmill", Company.first.name
   end
 end
 
