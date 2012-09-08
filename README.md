@@ -64,9 +64,9 @@ end
 You can also use fixtures to load up seed data for your tests. You have to provide the directory to the YAML files. Here is an example using fixtures.
 
 ```ruby
-require 'code_spike
+require 'code_spike'
 
-# Provide the directory path. In this case, it is the current directory ".".
+# Provide the directory path. In this case, it's the current directory ".".
 fixtures_directory '.'
 
 schema do
