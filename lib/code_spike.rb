@@ -1,5 +1,4 @@
 require 'test/unit'
-require 'active_support/core_ext/class/subclasses'
 require 'active_support/test_case'
 require 'active_record'
 
@@ -42,7 +41,6 @@ def fixtures_directory(fixtures_directory='.')
 end
 
 class CodeSpike < ActiveSupport::TestCase
-  teardown { ActiveRecord::Base.subclasses.each { |klass| klass.destroy_all} }
 end
 
 def units(&block)
