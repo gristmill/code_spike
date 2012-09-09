@@ -47,7 +47,7 @@ end
 
 def units(&block)
   if defined?(@fixtures_directory)
-    ActiveRecord::Fixtures.create_fixtures(@fixtures_directory, Dir["*.yml"].map { |f| File.basename(f, '.*') })
+    ActiveRecord::Fixtures.create_fixtures(@fixtures_directory, Dir["#{@fixtures_directory}/*.yml"].map { |f| File.basename(f, '.*') })
   end
 
   CodeSpike.instance_eval(&block)
