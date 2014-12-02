@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = CodeSpike::VERSION
 
-  gem.add_dependency "activesupport", "~> 3.2"
-  gem.add_dependency "activerecord", "~> 3.2"
+  gem.add_dependency "activesupport", "~> 4"
+  gem.add_dependency "activerecord", "~> 4"
   gem.add_dependency "sqlite3", "~> 1.3"
 end
